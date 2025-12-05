@@ -3,11 +3,12 @@ CREATE DATABASE res_province_transact_db;
 USE res_province_transact_db;
 
 CREATE TABLE res_province (
-    id INTEGER PRIMARY KEY NOT NULL,    
+    id INTEGER PRIMARY KEY NOT NULL,
+    country_id INTEGER NOT NULL,    
     name VARCHAR(100) NOT NULL
 );
 
-INSERT INTO res_province (id, name) VALUES (1,'La Paz'),(2,'Santa Cruz'),(3,'Tarija');
+INSERT INTO res_province (id, country_id, name) VALUES (1,62,'La Paz'),(2,62,'Santa Cruz'),(3,19,'Buenos Aires');
 
 CREATE TABLE street (
     id INTEGER PRIMARY KEY NOT NULL,    
